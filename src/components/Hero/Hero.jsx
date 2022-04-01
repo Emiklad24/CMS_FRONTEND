@@ -20,7 +20,7 @@ const Hero = () => {
            <a
             className="w-2/3 md:w-2/4 px-4  py-2 md:py-4 bg-blue-primary text-white uppercase text-sm md:text-md m-auto md:ml-0 text-center"
           >
-            Let's get started
+            Let's get started testing stuff
           </a>
           </Link>
         </div>
