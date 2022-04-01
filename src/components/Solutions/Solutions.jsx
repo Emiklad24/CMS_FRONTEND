@@ -31,9 +31,9 @@ const Solutions = () => {
 					<Image src={img} alt="" />
 				</div>
 				<div className="solution basis-1/2 flex flex-col items-center justify-between md:p-16">
-					<h2 className="heading text-lg md:text-2xl font-semibold capitalize md:text-left text-center text-dark-gray my-4">
+					<span className="heading text-lg md:text-2xl font-semibold capitalize md:text-left text-center text-dark-gray my-4">
 						We help our clients unlock growth by focusing on key solution areas:
-					</h2>
+					</span>
 					<div className="help">
 						{solutionData.map((solution, index) => (
 							<div key={index} className="flex flex-col items-left justify-start">
