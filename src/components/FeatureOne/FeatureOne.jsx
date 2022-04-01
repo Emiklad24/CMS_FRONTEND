@@ -130,6 +130,4 @@ const FeatureOne = () => {
 	)
 }
 
-
-
 export default FeatureOne
