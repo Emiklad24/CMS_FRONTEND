@@ -1,0 +1,47 @@
+{
+	"name": "cms-frontend",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"lint:fix": "eslint --fix",
+		"format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "yarn lint:fix && yarn format && yarn build && git add -A ."
+		}
+	},
+	"lint-staged": {
+		"*.+(js|jsx)": "eslint --fix",
+		"*.+(json|css|md)": "prettier --write"
+	},
+	"dependencies": {
+		"axios": "^0.26.1",
+		"formik": "^2.2.9",
+		"framer-motion": "^6.2.8",
+		"immer": "^9.0.12",
+		"next": "12.1.0",
+		"prop-types": "^15.8.1",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-query": "^3.34.16",
+		"yup": "^0.32.11",
+		"zustand": "^3.7.1"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.4",
+		"eslint": "8.11.0",
+		"eslint-config-next": "12.1.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.4",
+		"postcss": "^8.4.12",
+		"prettier": "^2.6.0",
+		"tailwindcss": "^3.0.23"
+	}
+}
