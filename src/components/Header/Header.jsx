@@ -15,7 +15,11 @@ const Header = () => {
 						<div className="flex flex-row items-center justify-start">
 							<Link href="/">
 								<a>
-									<Image src={logo} alt="vkm logo" className="w-30 h-8 md:h-14 my-auto" />
+									<Image
+										src={logo}
+										alt="vkm logo"
+										className="w-30 h-8 md:h-14 my-auto"
+									/>
 								</a>
 							</Link>
 

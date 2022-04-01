@@ -41,7 +41,7 @@ const Solutions = () => {
 									{solution.title || ""}
 								</span>
 								<span className="text-xs md:text-sm text-light-gray my-4">
-									{solution.desc }
+									{solution.desc}
 								</span>
 							</div>
 						))}
