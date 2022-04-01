@@ -111,15 +111,15 @@ const FeatureOne = () => {
 								<Image
 									className="h-full w-full bg-cover rounded"
 									src={feature1}
-									alt=""
+									alt="feature one"
 								/>
 							</div>
 							<div className="flex flex-row  h-auto">
 								<div className="mx-2">
-									<Image className="rounded" src={feature2} alt="" />
+									<Image className="rounded" src={feature2} alt="feature two" />
 								</div>
 								<div>
-									<Image className="rounded" src={feature3} alt="" />
+									<Image className="rounded" src={feature3} alt="feature three" />
 								</div>
 							</div>
 						</div>

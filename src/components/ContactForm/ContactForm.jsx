@@ -86,7 +86,7 @@ const ContactForm = () => {
 					</div>
 				</div>
 				<div className="img basis-1/2 p-8 md:p-16">
-					<Image src={img} alt="" />
+					<Image src={img} alt="contact us" />
 				</div>
 			</div>
 		</div>

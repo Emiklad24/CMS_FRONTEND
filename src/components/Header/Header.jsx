@@ -15,7 +15,7 @@ const Header = () => {
 						<div className="flex flex-row items-center justify-start">
 							<Link href="/">
 								<a>
-									<Image src={logo} alt="" className="w-30 h-8 md:h-14 my-auto" />
+									<Image src={logo} alt="vkm logo" className="w-30 h-8 md:h-14 my-auto" />
 								</a>
 							</Link>
 
@@ -37,11 +37,6 @@ const Header = () => {
 							<Link href="/pricing">
 								<a className="text-blue-primary  mx-2 md:mx-4 py-2 relative hoverable">
 									Pricing
-								</a>
-							</Link>
-							<Link href="/support">
-								<a className="text-blue-primary  mx-2 md:mx-4 py-2 relative hoverable">
-									Support
 								</a>
 							</Link>
 							<Link href="/contact">
@@ -145,11 +140,6 @@ const Header = () => {
 					<Link href="/pricing">
 						<a className="flex py-2 px-4 hover:bg-gray-200 hover:border-l-4 hover:border-l-blue-primary">
 							Pricing
-						</a>
-					</Link>
-					<Link href="/support">
-						<a className="flex py-2 px-4 hover:bg-gray-200 hover:border-l-4 hover:border-l-blue-primary">
-							Support
 						</a>
 					</Link>
 					<Link href="/contact">
