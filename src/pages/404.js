@@ -8,7 +8,7 @@ const NotFound = () => {
 			<section className="w-full bg-background-bg p-24">
 				<div className="flex flex-col md:flex-row items-center justify-between p-4 md:p-8">
 					<div className="flex basis-1/2 hidden md:block">
-						<Image src={ErrorPage} alt="" className="p-32" />
+						<Image src={ErrorPage} alt="page not found" className="p-32" />
 					</div>
 					<div className="flex basis-1/2 items-center justify-center">
 						<section className="p-4 md:p-12 m-auto bg-white w-[full] md:w-3/4">

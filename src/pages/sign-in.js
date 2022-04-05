@@ -10,7 +10,7 @@ const SignIn = () => {
 			<section className="w-full bg-background-bg pb-16">
 				<div className="flex flex-col md:flex-row items-center justify-between p-4 md:p-8">
 					<div className="flex basis-1/2 hidden md:block">
-						<Image src={signin} alt="" className="p-32" />
+						<Image src={signin} alt="sign in" className="p-32" />
 					</div>
 					<div className="flex basis-1/2 items-center justify-center">
 						<section className="p-4 md:p-12 m-auto bg-white w-[full] md:w-3/4">
@@ -90,7 +90,7 @@ const SignIn = () => {
 											</a>
 										</Link>
 									</p>
-									<Link href="/">
+									<Link href="/password-reset">
 										<a className="block text-xs text-light-gray hover:text-blue-primary">
 											Forgot password?
 										</a>
