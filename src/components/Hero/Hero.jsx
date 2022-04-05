@@ -16,7 +16,7 @@ const Hero = () => {
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua.
 					</h3>
-					<Link href="/signup">
+					<Link href="/get-started">
 						<a className="w-2/3 md:w-2/4 px-4  py-2 md:py-4 bg-blue-primary text-white uppercase text-sm md:text-md m-auto md:ml-0 text-center">
 							Let&apos;s get started
 						</a>
