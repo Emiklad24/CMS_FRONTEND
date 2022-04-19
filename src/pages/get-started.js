@@ -95,7 +95,7 @@ const SignUp = () => {
 								<div className="space-y-2 w-full flex flex-col">
 									<p className="text-xs md:text-sm flex flex-row md:justify-start justify-between text-dark-gray">
 										Already have an account?
-										<Link href="/sign-in">
+										<Link href="/login">
 											<a className="mx-2 text-right text-blue-primary">
 												Log In
 											</a>
