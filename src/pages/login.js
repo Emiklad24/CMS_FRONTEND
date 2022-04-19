@@ -45,8 +45,8 @@ const Login = () => {
 										<a className="basis-1/2 flex flex-col-reverse md:flex-row text-center items-center justify-between p-3 text-xs  w-full text-dark-gray border border-lighter-gray mb-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-primary">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
-												width="24"
-												height="24"
+												width="27"
+												height="27"
 												viewBox="0 0 24 24"
 												fill="currentColor"
 												className="mr-2 text-google"

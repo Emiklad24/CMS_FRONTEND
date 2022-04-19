@@ -14,7 +14,7 @@ module.exports = {
 			gold: "#FFB61D",
 			google: "#DB4437",
 			linkedin: "#0e76a8",
-			danger: "#FF0000",
+			danger: "#CA0B00",
 			"background-bg": "#F1EFFF",
 			"dark-gray": "#333333",
 			"light-gray": "#666666",
