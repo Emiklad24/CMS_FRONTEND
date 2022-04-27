@@ -1,12 +1,19 @@
 import Link from "next/link"
-import Header from "@components/Header/Header"
-import signin from "@assets/images/signin.svg"
-import Image from "next/image"
 
+// import LoadingSpinner from "@components/LoadingSpinner/LoadingSpinner"
+import signin from "@assets/images/signin.svg"
+
+import Image from "next/image"
 import { AiOutlineWarning } from "react-icons/ai"
 
 import { useFormik } from "formik"
 import * as Yup from "yup"
+// import { useMutation } from "react-query"
+// import { authInstanceAxios } from "@config/axiosInstance"
+// import { SIGNUP_MUTATION_KEY } from "@config/queryKeys"
+// import SuccessToast from "@components/Toasts/SuccessToast"
+// import ErrorToast from "@components/Toasts/ErrorToast"
+import Layout from "@components/Layout/Layout"
 
 const Login = () => {
 	const formik = useFormik({
@@ -21,21 +28,22 @@ const Login = () => {
 				.min(8, "Password is too short - should contain min. 8 characters")
 				.matches(/[a-zA-Z]/, "Password can only contain Latin letters."),
 		}),
-		onSubmit: (values) => {
-			alert(JSON.stringify(values, null, 2))
-		},
+		// onSubmit: onSubmitHandler,
 	})
 
 	return (
-		<div>
-			<Header />
+		<Layout
+			pageMeta={{
+				title: "Login - CMS",
+			}}
+		>
 			<section className="w-full bg-background-bg pb-16">
 				<div className="flex flex-col md:flex-row items-center justify-between p-4 md:p-8">
-					<div className="flex basis-1/2 hidden md:block">
+					<div className="basis-1/2 hidden flex items-center text-center justify-center my-auto p-16 md:block">
 						<Image src={signin} alt="sign in" className="p-32" />
 					</div>
 					<div className="flex basis-1/2 items-center justify-center">
-						<section className="p-4 md:p-12 m-auto bg-white w-[full] md:w-3/4">
+						<section className="p-4 lg:p-12 m-auto bg-white w-[full] lg:w-3/4">
 							<div className="w-full mx-auto ">
 								<h1 className="text-sm md:text-xl text-center text-dark-gray">
 									Login to your account
@@ -134,11 +142,12 @@ const Login = () => {
 											Forgot password?
 										</a>
 									</Link>
-									<input
+									<button
 										type="submit"
 										className="w-full p-2 md:p-4 text-xs md:text-sm text-white bg-blue-primary my-2 cursor-pointer"
-										value="Continue with email"
-									/>
+									>
+										Continue with email
+									</button>
 								</form>
 								<div className="space-y-2">
 									<p className="text-xs md:text-sm flex flex-row md:justify-start justify-between text-dark-gray">
@@ -155,7 +164,7 @@ const Login = () => {
 					</div>
 				</div>
 			</section>
-		</div>
+		</Layout>
 	)
 }
 
