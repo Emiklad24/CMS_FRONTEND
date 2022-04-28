@@ -14,7 +14,10 @@ module.exports = {
 			gold: "#FFB61D",
 			google: "#DB4437",
 			linkedin: "#0e76a8",
+			danger: "#CA0B00",
+			success: "#4BB543",
 			"background-bg": "#F1EFFF",
+			"off-white": "#F5FFFA",
 			"dark-gray": "#333333",
 			"light-gray": "#666666",
 			"lighter-gray": "#cecece",
@@ -23,7 +26,17 @@ module.exports = {
 			sans: ["Montserrat", "sans-serif"],
 			serif: ["Merriweather", "serif"],
 		},
-		extend: {},
+		extend: {
+			keyframes: {
+				wiggle: {
+					"0%, 100%": { transform: "rotate(-3deg)" },
+					"50%": { transform: "rotate(3deg)" },
+				},
+			},
+			animation: {
+				wiggle: "wiggle 200ms ease-in-out",
+			},
+		},
 	},
 	plugins: [],
 }

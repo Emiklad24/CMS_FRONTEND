@@ -53,12 +53,12 @@ const Header = () => {
 
 					{/* sign up Login... */}
 					<div className="hidden md:flex md:text-xs capitalize items-center justify-end basis-2/6 text-center">
-						<Link href="/signin">
+						<Link href="/login">
 							<a className=" md:text-blue-primary  border border-blue-primary px-4 py-2 relative hover:text-white hover:bg-blue-primary">
-								Sign in
+								Login
 							</a>
 						</Link>
-						<Link href="/signup">
+						<Link href="/get-started">
 							<a className=" md:text-white bg-blue-primary hover:border hover:border-blue-primary hover:text-blue-primary hover:bg-white ml-4  px-4 py-2 relative">
 								Get Started
 							</a>
@@ -154,7 +154,7 @@ const Header = () => {
 				</div>
 
 				<div className="accounts flex flex-col items-center justify-center text-center my-12 p-8">
-					<Link href="/signin">
+					<Link href="/login">
 						<a className="w-full text-blue-primary  border border-blue-primary px-2 py-2 relative hover:text-white hover:bg-blue-primary">
 							Sign in
 						</a>

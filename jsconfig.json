@@ -17,12 +17,14 @@
 		"paths": {
 			"@components/*": ["src/components/*"],
 			"@libs/*": ["src/libs/*"],
+			"@context/*": ["src/context/*"],
 			"@pages/*": ["src/pages/*"],
 			"@styles/*": ["src/styles/*"],
 			"@hooks/*": ["src/hooks/*"],
 			"@services/*": ["src/services/*"],
 			"@config/*": ["src/config/*"],
-			"@assets/*": ["src/assets/*"]
+			"@assets/*": ["src/assets/*"],
+			"@store/*": ["src/store/*"]
 		}
 	}
 }
