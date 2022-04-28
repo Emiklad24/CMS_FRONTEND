@@ -4,16 +4,13 @@ import { useConsultantSignupFormValidation } from "@hooks/FormValidations/consul
 import LoadingSpinner from "@components/LoadingSpinner/LoadingSpinner"
 import { AiOutlineWarning } from "react-icons/ai"
 
-
 const ConsultantSignup = () => {
-
 	const { mutate, isLoading } = useCreateConsultant()
 	const onSubmitHandler = (values) => {
 		mutate(values)
 	}
 
-  const formik = useConsultantSignupFormValidation(onSubmitHandler)
-
+	const formik = useConsultantSignupFormValidation(onSubmitHandler)
 
 	return (
 		<div>
@@ -101,7 +98,6 @@ const ConsultantSignup = () => {
 				>
 					{isLoading ? <LoadingSpinner text="Signing you up..." /> : "Sign up"}
 				</button>
-			
 			</form>
 			<div className="space-y-2 w-full flex flex-col">
 				<p className="text-xs md:text-sm flex flex-row md:justify-start justify-between text-dark-gray">
