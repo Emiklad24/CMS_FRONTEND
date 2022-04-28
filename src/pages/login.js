@@ -1,36 +1,19 @@
 import Link from "next/link"
-
-// import LoadingSpinner from "@components/LoadingSpinner/LoadingSpinner"
-import signin from "@assets/images/signin.svg"
-
-import Image from "next/image"
+import { useLogin } from "@hooks/useLogin.hook"
+import { useLoginFormValidation } from "@hooks/FormValidations/loginFormValidation.schema"
+import LoadingSpinner from "@components/LoadingSpinner/LoadingSpinner"
 import { AiOutlineWarning } from "react-icons/ai"
-
-import { useFormik } from "formik"
-import * as Yup from "yup"
-// import { useMutation } from "react-query"
-// import { authInstanceAxios } from "@config/axiosInstance"
-// import { SIGNUP_MUTATION_KEY } from "@config/queryKeys"
-// import SuccessToast from "@components/Toasts/SuccessToast"
-// import ErrorToast from "@components/Toasts/ErrorToast"
+import signin from "@assets/images/signin.svg"
+import Image from "next/image"
 import Layout from "@components/Layout/Layout"
 
 const Login = () => {
-	const formik = useFormik({
-		initialValues: {
-			email: "",
-			password: "",
-		},
-		validationSchema: Yup.object({
-			email: Yup.string().email("Invalid email address").required("This field is empty!"),
-			password: Yup.string()
-				.required("This field is empty!")
-				.min(8, "Password is too short - should contain min. 8 characters")
-				.matches(/[a-zA-Z]/, "Password can only contain Latin letters."),
-		}),
-		// onSubmit: onSubmitHandler,
-	})
+	const { mutate, isLoading } = useLogin()
+	const onSubmitHandler = (values) => {
+		mutate(values)
+	}
 
+	const formik = useLoginFormValidation(onSubmitHandler)
 	return (
 		<Layout
 			pageMeta={{
@@ -146,7 +129,11 @@ const Login = () => {
 										type="submit"
 										className="w-full p-2 md:p-4 text-xs md:text-sm text-white bg-blue-primary my-2 cursor-pointer"
 									>
-										Continue with email
+										{isLoading ? (
+											<LoadingSpinner text="Logging you in..." />
+										) : (
+											"Login"
+										)}
 									</button>
 								</form>
 								<div className="space-y-2">

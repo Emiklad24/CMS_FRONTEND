@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import PropTypes from "prop-types"
 
 const LoadingSpinner = (props) => {
@@ -26,7 +26,7 @@ const LoadingSpinner = (props) => {
 }
 
 LoadingSpinner.propTypes = {
-	text: PropTypes.string.isRequired
+	text: PropTypes.string.isRequired,
 }
 
 export default LoadingSpinner

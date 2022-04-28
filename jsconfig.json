@@ -23,7 +23,8 @@
 			"@hooks/*": ["src/hooks/*"],
 			"@services/*": ["src/services/*"],
 			"@config/*": ["src/config/*"],
-			"@assets/*": ["src/assets/*"]
+			"@assets/*": ["src/assets/*"],
+			"@store/*": ["src/store/*"]
 		}
 	}
 }

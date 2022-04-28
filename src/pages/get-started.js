@@ -12,12 +12,8 @@ import ConsultantSignup from "@components/AuthForm/ConsultantSignup"
 const SignUp = () => {
 	const [activeForm, setActiveForm] = useState("")
 
-	const handleConsultantForm = () => {
-		setActiveForm(<ConsultantSignup />)
-	}
-
-	const handleCompanyForm = () => {
-		setActiveForm(<CompanySignup />)
+	const toggleActiveForm = (value) => {
+		setActiveForm(value || "")
 	}
 
 	return (
@@ -46,14 +42,14 @@ const SignUp = () => {
 
 							<div className="flex items-center lg:justify-between justify-evenly mt-8 w-full">
 								<button
-									onClick={handleCompanyForm}
+									onClick={() => toggleActiveForm("company-form")}
 									className="w-2/5 flex flex-col items-center justify-center text-center focus:outline-none focus:bg-blue-primary focus:border-none focus:text-white transition duration-150 ease-in-out hover:bg-blue-primary hover:text-white hover:bg-opacity-90 hover:border-none bg-white rounded border border-lighter-gray text-light-gray tracking-wide px-4 lg:px-8 py-4 text-sm lg:text-lg"
 								>
 									<Image src={company} alt="company-icon" />
 									<span className="my-2">Company</span>
 								</button>
 								<button
-									onClick={handleConsultantForm}
+									onClick={() => toggleActiveForm("consultant-form")}
 									className="w-2/5 flex flex-col items-center justify-center text-center focus:outline-none focus:bg-blue-primary focus:border-none focus:text-white transition duration-150 ease-in-out hover:bg-blue-primary hover:text-white hover:bg-opacity-90 hover:border-none bg-white rounded border border-lighter-gray text-light-gray tracking-wide  px-4 lg:px-8 py-4 text-sm lg:text-lg"
 								>
 									<Image src={consultant} alt="company-icon" />
@@ -62,7 +58,10 @@ const SignUp = () => {
 							</div>
 
 							{/* display either forms onclick event */}
-							<div className="my-8">{activeForm}</div>
+							<div className="my-8">
+								{activeForm === "consultant-form" ? <ConsultantSignup /> : null}
+								{activeForm === "company-form" ? <CompanySignup /> : null}
+							</div>
 						</section>
 					</div>
 				</div>
